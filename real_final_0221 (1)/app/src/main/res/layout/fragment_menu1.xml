@@ -5,10 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#a1c8de"
    >
-
-
-    <ImageView
+    <com.github.siyamed.shapeimageview.RoundedImageView
         android:id="@+id/user"
         android:layout_width="180dp"
         android:layout_height="182dp"
@@ -16,13 +15,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/user"
+        android:src="@drawable/user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
-
+        app:layout_constraintVertical_bias="0.185"
+        />
     <ImageButton
         android:id="@+id/add_photo"
         android:layout_width="40dp"
@@ -80,7 +79,7 @@
 
 
     <Button
-        android:id="@+id/push_button3"
+        android:id="@+id/push_button4"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -99,7 +98,7 @@
         app:layout_constraintVertical_bias="0.789" />
 
     <Button
-        android:id="@+id/push_button4"
+        android:id="@+id/push_button3"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"

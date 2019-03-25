@@ -230,20 +230,20 @@ public class ImagePro
         final CharSequence[] items = { "Capture Photo", "Choose from Gallery", "Cancel" };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle("Add Photo!");
+        builder.setTitle("사진 선택!");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
 
-                if (items[item].equals("Capture Photo")) {
+                if (items[item].equals("사진 찍기")) {
 
                     captureImage();
 
-                } else if (items[item].equals("Choose from Gallery")) {
+                } else if (items[item].equals("앨범에서 사진선택")) {
 
                     pickImage();
 
-                } else if (items[item].equals("Cancel")) {
+                } else if (items[item].equals("취소")) {
                     dialog.dismiss();
                 }
             }
@@ -295,6 +295,7 @@ public class ImagePro
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp1.jpg");
             mImageCaptureUri = FileProvider.getUriForFile(activity,"com.example.user.myapplication.fileprovider", f);// Change
+            Log.i("%%%%%%", f.toString());
             intent.putExtra(MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
             activity.startActivityForResult(intent, CAMERA_CODE);
         } else {

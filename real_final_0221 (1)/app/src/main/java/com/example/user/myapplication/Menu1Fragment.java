@@ -11,8 +11,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -41,11 +43,16 @@ public class Menu1Fragment extends Fragment {
 
        ivCrop.setImageBitmap(imageDetails.getBitmap());
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.fragment_menu1, container, false);
         ImageButton fab = (ImageButton) v.findViewById(R.id.add_photo);
+        Button btn1=(Button)v.findViewById(R.id.push_button1);
+        Button btn2=(Button)v.findViewById(R.id.push_button2);
+        Button btn3=(Button)v.findViewById(R.id.push_button3);
+        Button btn4=(Button)v.findViewById(R.id.push_button4);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +62,35 @@ public class Menu1Fragment extends Fragment {
                 }
                 imagePro.openImagePickOption();
 
+            }
+        });
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "행복", Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "화남", Toast.LENGTH_LONG).show();
+
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "즐거움", Toast.LENGTH_LONG).show();
+
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(getContext(), "슬픔", Toast.LENGTH_LONG).show();
             }
         });
 

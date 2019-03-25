@@ -3,11 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#a1c8de"
+
     >
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="MENU 3"/>
+        android:layout_margin="50dp"
+
+        android:src="@drawable/chart" />
 </LinearLayout>

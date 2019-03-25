@@ -12,10 +12,15 @@
         android:layout_marginBottom="?attr/actionBarSize"/>
 
     <android.support.design.widget.BottomNavigationView
+        app:itemBackground="@color/colorBottombar"
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottombar_menu" />
+
+        app:menu="@menu/bottombar_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        />
+
 </android.support.design.widget.CoordinatorLayout>

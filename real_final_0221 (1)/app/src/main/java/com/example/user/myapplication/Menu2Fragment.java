@@ -32,14 +32,15 @@ public class Menu2Fragment extends Fragment {
             Log.d(" ### ", imageDetails.getPath() + ", " + imageDetails.getBitmap().getConfig());
         }
         else if (requestCode == ImagePro.GALLERY_CODE) {
-//            Log.d(" $$$ ","resultCode:"+resultCode);
+//            Log.d(" $$$ ","r
+// esultCode:"+resultCode);
             imageDetails = imagePro.getImagePath(ImagePro.GALLERY_CODE, RESULT_OK, data);
 
         }
 
-
         ivCrop.setImageBitmap(imageDetails.getBitmap());
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
